@@ -4,7 +4,7 @@ it's can sending email in background services without know sending email success
 
 ## publisher
 
-1. Nur Arifin
+1. Nur Arifin => arifin@lenna.ai
 
 ## main tech must being install
 
@@ -13,20 +13,20 @@ it's can sending email in background services without know sending email success
 3. mail account
 4. composer
 
-# Dockerize RabbitMQ
+## Dockerize RabbitMQ
 
 -   docker run --rm -it --hostname my-rabbit -p 15672:15672 -p 5672:5672 rabbitmq:3-management
 
 ## change mail driver
 
-MAIL_DRIVER=sendmail
-MAIL_HOST=smtp.gmail.com
-MAIL_PORT=587
-MAIL_USERNAME=**\*\*\*\***@gmail.com
-MAIL_PASSWORD=\*\*\*\*\*\*\*\*
-MAIL_ENCRYPTION=tls
-MAIL_FROM_ADDRESS="${MAIL_USERNAME}"
-MAIL_FROM_NAME="${APP_NAME}"
+-   MAIL_DRIVER=sendmail
+-   MAIL_HOST=smtp.gmail.com
+-   MAIL_PORT=587
+-   MAIL_USERNAME=**\*\*\*\***@gmail.com
+-   MAIL_PASSWORD=\*\*\*\*\*\*\*\*
+-   MAIL_ENCRYPTION=tls
+-   MAIL_FROM_ADDRESS="${MAIL_USERNAME}"
+-   MAIL_FROM_NAME="${APP_NAME}"
 
 ## installing clone project
 
@@ -39,9 +39,9 @@ MAIL_FROM_NAME="${APP_NAME}"
 
 ## management console rabbitmq
 
-http://localhost:15672/
-user: guest
-pass: guest
+-   http://localhost:15672/
+-   user: guest
+-   pass: guest
 
 ### References
 
