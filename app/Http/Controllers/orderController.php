@@ -15,7 +15,6 @@ class orderController extends Controller
     public function index()
     {
         try {
-
             $min = 1;
             $max = 10000;
             $order = rand($min, $max);
@@ -29,30 +28,24 @@ class orderController extends Controller
     {
         try {
             Amqp::consume('test', function ($message, $resolver) {
-                // $sid = 'ACf3ba81136a16388fc91a87e921d0254b';
-                // $token = '822b5d4253b6f4f604caaded8cd7a7e7';
-                // $client = new Client($sid, $token);
-
-                // // Use the client to do fun stuff like send text messages!
-                // $client->messages->create(
-                //     // the number you'd like to send the message to
-                //     '+9771234567890',
-                //     [
-                //         'from' => '+1234567890',
-                //         'body' => $message->body,
-                //     ]
-                // );
                 $details = [
                     'title' => 'Mail from laravel arifin rabbitmq',
                     'body' => $message->body
                 ];
-
                 Mail::to('arifingdr@gmail.com')->send(new MyTestMail($details));
 
-                // dd("Email is Sent.");
 
+                /*
+                --> acknowledge
+                proccess delivering from customers messaging
+                -- data being process --
+                */
                 $resolver->acknowledge($message);
 
+                /*
+                --> stopWhenProcessed
+                stop proccess delivering acknowledge
+                */
                 $resolver->stopWhenProcessed();
             });
             $data = [

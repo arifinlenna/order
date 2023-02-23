@@ -17,8 +17,20 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+/*
+route publish rabbitmq sending in queue test
+*/
 Route::get('testapi', 'orderController@index')->name('testapi');
+
+/*
+route consuming rabbitmq when data ready in queue test
+*/
 Route::get('notification', 'orderController@notification')->name('notification');
+
+/*
+testing from routes straight to send-email
+*/
 Route::get('send-mail', function () {
 
     $details = [

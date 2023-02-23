@@ -4,8 +4,108 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "867fd6e6be4406fc8a10af542c46124a",
+    "content-hash": "6f5165142649d80b11933aa23a7ca2d3",
     "packages": [
+        {
+            "name": "anik/amqp",
+            "version": "v2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ssi-anik/amqp.git",
+                "reference": "eea4f4469d5d185865b69c103c470a3ab6c76236"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ssi-anik/amqp/zipball/eea4f4469d5d185865b69c103c470a3ab6c76236",
+                "reference": "eea4f4469d5d185865b69c103c470a3ab6c76236",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2|^8.0",
+                "php-amqplib/php-amqplib": "^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5|^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Anik\\Amqp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Syed Sirajul Islam Anik",
+                    "email": "sirajul.islam.anik@gmail.com"
+                }
+            ],
+            "description": "php-amqplib wrapper that eases the consumption of RabbitMQ. A painless way of using RabbitMQ",
+            "support": {
+                "issues": "https://github.com/ssi-anik/amqp/issues",
+                "source": "https://github.com/ssi-anik/amqp/tree/v2.1"
+            },
+            "time": "2022-05-15T04:08:51+00:00"
+        },
+        {
+            "name": "anik/laravel-amqp",
+            "version": "v1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ssi-anik/laravel-amqp.git",
+                "reference": "944d8e28b64eccb794fa4312341713b65a9469e2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ssi-anik/laravel-amqp/zipball/944d8e28b64eccb794fa4312341713b65a9469e2",
+                "reference": "944d8e28b64eccb794fa4312341713b65a9469e2",
+                "shasum": ""
+            },
+            "require": {
+                "anik/amqp": "^2.0",
+                "illuminate/support": "^6.0|^7.0|^8.0|^9.0",
+                "php": "^7.2|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.0|^5.0|^6.0|^7.0",
+                "phpunit/phpunit": "^8.0|^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Anik\\Laravel\\Amqp\\Providers\\AmqpServiceProvider"
+                    ],
+                    "aliases": {
+                        "Amqp": "Anik\\Laravel\\Amqp\\Facades\\Amqp"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Anik\\Laravel\\Amqp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Syed Sirajul Islam Anik",
+                    "email": "sirajul.islam.anik@gmail.com"
+                }
+            ],
+            "description": "anik/amqp wrapper for Laravel-ish frameworks",
+            "support": {
+                "issues": "https://github.com/ssi-anik/laravel-amqp/issues",
+                "source": "https://github.com/ssi-anik/laravel-amqp/tree/v1.3"
+            },
+            "time": "2022-05-15T00:15:38+00:00"
+        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.1.1",
@@ -7558,5 +7658,5 @@
         "php": "^7.2.5|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.3.0"
 }
